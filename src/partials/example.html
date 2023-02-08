@@ -1,37 +1,39 @@
-<article class="example" id="uk">
-  <h1>HTML-partials</h1>
-
-  <!--
-    ❗️❗️❗️ The path to images from the HTML partial
-    is the same as from the index.html file
-  -->
-  <img src="images/logo.png" alt="" width="320" />
-
-  <p>
-    The
-    <a
-      href="https://github.com/posthtml/posthtml-include"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      posthtml-include
-    </a>
-    plugin allows you to add code from other HTML files (fragments) to HTML page
-    files. Fragments are stored in the <code>src/partials</code> folder. The
-    addition occurs when compiling page files, such as <code>index.html</code>.
-  </p>
-
-  <p>
-    This <code>example.html</code> file is an example of such a snippet, with
-    the markup of a certain part of the main page. This is very convenient for
-    team development on student projects, when several people write in one HTML
-    file at once.
-  </p>
-
-  <p>
-    The syntax for adding a fragment to the main file is:
-    <code> &lt;include src="./partials/filename.html"&gt;&lt;/include&gt;</code>
-  </p>
-
-  <div class="background"></div>
-</article>
+<main class="slider">
+  <section class="slider__section">
+    <div class="slider__first-slide container">
+      <ul class="slider__list">
+        <li class="slider__item">
+          <h1 class="slider__title">
+            Our vision <span class="slider__title--uppercase">design</span>
+          </h1>
+          <p class="slider__text">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum.
+          </p>
+          <div class="wrapper">
+            <div class="donut"></div>
+            <a class="slider__link" href="">Take a look</a>
+          </div>
+        </li>
+      </ul>
+      <div class="btn-wrapper">
+        <button class="button" type="button">back</button>
+        <button class="button" type="button">front</button>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- <div class="glide">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide">0</li>
+      <li class="glide__slide">1</li>
+      <li class="glide__slide">2</li>
+    </ul>
+  </div>
+  <div data-glide-el="controls">
+    <button data-glide-dir="<">Start</button>
+    <button data-glide-dir=">">End</button>
+  </div>
+</div> -->
