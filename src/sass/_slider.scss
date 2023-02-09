@@ -1,0 +1,158 @@
+.slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.slider {
+  position: relative;
+
+  &__first-slide {
+    @extend .slide;
+    background-image: url(../images/desktop/slide11x.png);
+    @include pixel_ratio {
+      background-image: url(../images/desktop/slide12x.png);
+    }
+  }
+  &__second-slide {
+    @extend .slide;
+    background-image: url(../images/desktop/slide21x.png);
+    @include pixel_ratio {
+      background-image: url(../images/desktop/slide22x.png);
+    }
+  }
+  &__third-slide {
+    @extend .slide;
+    background-image: url(../images/desktop/slide31x.png);
+    @include pixel_ratio {
+      background-image: url(../images/desktop/slide32x.png);
+    }
+  }
+
+  &__item {
+    max-width: 527px;
+    padding-left: 88px;
+    @include phone {
+      padding-left: 44px;
+      max-width: 262px;
+    }
+  }
+  &__title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: $title-font;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $main-text-color;
+    padding-bottom: 65px;
+    padding-top: 347px;
+    @include phone {
+      font-size: $title-font-phone;
+      padding-bottom: 33px;
+      padding-top: 174px;
+    }
+    @include laptop {
+      padding-top: 188px;
+    }
+
+    &--uppercase {
+      font-family: 'Viga';
+      font-weight: 400;
+      font-size: $title-font-huge;
+      line-height: 1.06;
+      @include phone {
+        font-size: $title-font-phone-huge;
+      }
+    }
+  }
+  &__text {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: $text-font;
+    line-height: 1.5;
+    color: $main-text-color;
+    @include phone {
+      font-size: $text-font-phone;
+    }
+  }
+  &__link {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: $link-font;
+    line-height: 1.25;
+    color: $main-text-color;
+    padding-left: 8px;
+    transition: $timing-function;
+    @include phone {
+      font-size: $link-font-phone;
+      padding-left: 4px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: $main-text-color;
+      left: 0;
+      width: 116px;
+      top: 50px;
+      margin-top: 2px;
+      @include phone {
+        width: 58px;
+      }
+    }
+    &:hover,
+    &:focus {
+      transform: $transform-function;
+    }
+  }
+}
+
+.donut {
+  border: 1.5px solid $main-text-color;
+  border-radius: 100px;
+  height: 10px;
+  width: 10px;
+}
+
+.link-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 39px;
+  @include phone {
+    padding-top: 20px;
+  }
+}
+
+.btn1 {
+  position: absolute;
+  cursor: pointer;
+  bottom: 60;
+  left: 103;
+  @include phone {
+    bottom: 30;
+    left: 52;
+  }
+}
+.btn2 {
+  position: absolute;
+  cursor: pointer;
+  bottom: 60;
+  right: 103;
+  @include phone {
+    bottom: 30;
+    right: 52;
+  }
+}
+
+.arrow {
+  transition: $timing-function;
+  fill: $main-text-color;
+  opacity: 1;
+  &:hover,
+  &:focus {
+    transform: $transform-function;
+  }
+}
